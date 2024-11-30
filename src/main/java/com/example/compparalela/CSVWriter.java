@@ -36,4 +36,23 @@ public class CSVWriter {
             System.err.println("Erro: " + e.getMessage());
         }
     }
+    public static void writeWordCountCSV(String filePath, double[] tempos, int[] resultados, String palavra) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            // Cabeçalho do CSV
+            writer.write("Método,Tempo de Execução (ms),Ocorrências da Palavra '" + palavra + "'");
+            writer.newLine();
+
+            // Adicionando dados de cada método
+            writer.write("Serial," + (tempos[0] / 1e6) + "," + resultados[0]);
+            writer.newLine();
+            writer.write("Paralelo," + (tempos[1] / 1e6) + "," + resultados[1]);
+            writer.newLine();
+            writer.write("GPU," + (tempos[2] / 1e6) + "," + resultados[2]);
+            writer.newLine();
+
+            System.out.println("Arquivo CSV gerado em: " + filePath);
+        } catch (IOException e) {
+            System.err.println("Erro ao criar o arquivo CSV: " + e.getMessage());
+        }
+    }
 }

@@ -9,5 +9,8 @@
         <module name="demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="compparalela" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
