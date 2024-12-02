@@ -22,7 +22,8 @@ Esses métodos foram testados, inicialmente, com base no texto "Don Quixote", bu
   - **CounterGPU**: Contém o kernel OpenCL e as operações para execução na GPU.  
   - **CounterTask**: Classe de apoio para a contagem paralela.  
   - **WordCounterMain**: Classe main que inicia os testes e exibe os resultados.  
-  - **BarChart** e **CSVWriter**: Geram gráficos e exportam dados em .csv.  
+  - **BarChart**: Gera um gráfico a partir dos dados das execuções.
+  - **CSVWriter**: Exporta os dados para um arquivo .csv.  
 
 ### Metodologia  
 Análise estatística dos resultados obtidos para identificar padrões de desempenho e comparar os algoritmos sob diferentes condições.
